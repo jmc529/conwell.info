@@ -1,50 +1,87 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <!--Google Icon Font-->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <!--Devicons Font-language icons-->
-    <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/master/devicon.min.css">
-    <!--Google Raleway Font-->
-    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
-    <!--Materialize.css, compiled from "scss/materialize.scss"-->
-    <link type="text/css" rel="stylesheet" href="css/materialize.css"  media="screen,projection"/>
-    <!--Let browser know website is optimized for mobile-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <!-- <link rel="icon" type="image/png" href="images/logo.png"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Joseph Conwell</title>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-131468646-1"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'UA-131468646-1');
-    </script>
+    <link rel="stylesheet" type="text/css" href="../css/bulma.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script defer src="../js/script.js"></script>
   </head>
   <body>
+    <!-- Header -->
     <header>
-      <!-- Preloader -->
-      <div class="Preloader">
-      </div>
+      <!-- Navbar -->
+      <nav class="navbar is-fixed-top is-transparent" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+          <!-- <a class="navbar-item" href="https://bulma.io">
+            <img src="../resources/images/icon.png" width="112" height="28">
+          </a> -->
 
-      <!-- Nav Bar -->
+          <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbar">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
+        </div>
+
+        <div id="navbar" class="navbar-menu">
+          <div class="navbar-start">
+            <a class="navbar-item">
+              About Me
+            </a>
+            <a class="navbar-item">
+              Projects
+            </a>
+            <a class="navbar-item">
+              Expierence
+            </a>
+            <a class="navbar-item">
+              Contact
+            </a>
+          </div>
+          
+          <div class="navbar-end">
+            <div class="navbar-item">
+              <div class="buttons">
+                <a class="button is-primary">
+                  <strong>Resume</strong>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      
+      <!-- Hero -->
+      <section class="hero is-primary is-fullheight-with-navbar is-bold">
+        <div class="hero-body">
+          <div class="container is-centered">
+            <h1 class="title">
+              Hey, I'm Joe.
+            </h1>
+            <h2 class="subtitle">
+              I'm an avid fan of cooking, coding, and cating. 
+            </h2>
+          </div>
+        </div>
+      </section>
     </header>
 
-    <!-- About Me -->
+    <!-- Main -->
+    <main>
+      <!-- About Me -->
 
-    <!-- Experience -->
+      <!-- Projects -->
 
-    <!-- Personal Projects -->
+      <!-- Experience -->
 
-    <!--  -->
+      <!-- Contact -->
+    </main>
 
+    <!-- Footer -->
     <footer>
       
     </footer>
-
-    <!--JavaScript at end of body for optimized loading-->
-    <script type="text/javascript" src="js/materialize.min.js"></script>
   </body>
 </html>
