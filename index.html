@@ -3,85 +3,107 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Joseph Conwell</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.css">
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
     <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script defer src="../js/script.js"></script>
   </head>
   <body>
     <!-- Header -->
-    <header>
-      <!-- Navbar -->
-      <nav class="navbar is-fixed-top is-transparent" role="navigation" aria-label="main navigation">
-        <div class="navbar-brand">
-          <!-- <a class="navbar-item" href="https://bulma.io">
-            <img src="../resources/images/icon.png" width="112" height="28">
-          </a> -->
-
-          <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbar">
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-          </a>
-        </div>
-
-        <div id="navbar" class="navbar-menu">
-          <div class="navbar-start">
-            <a class="navbar-item">
-              About Me
-            </a>
-            <a class="navbar-item">
-              Projects
-            </a>
-            <a class="navbar-item">
-              Expierence
-            </a>
-            <a class="navbar-item">
-              Contact
-            </a>
-          </div>
-          
-          <div class="navbar-end">
-            <div class="navbar-item">
-              <div class="buttons">
-                <a class="button is-primary">
-                  <strong>Resume</strong>
-                </a>
+    <header> 
+      <!-- Hero -->
+      <section class="hero is-primary is-fullheight is-bold">
+        <div class="hero head">
+          <!-- Navbar -->
+          <nav id="navbar" class="navbar is-fixed-top " role="navigation" aria-label="main navigation">
+            <div class="navbar-brand">
+              <!-- <a class="navbar-item" href="https://bulma.io">
+                <img src="../resources/images/icon.png" width="112" height="28">
+              </a> -->
+              <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbar">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+              </a>
+            </div>
+            <div id="navbarMenuHeroA" class="navbar-menu">
+              <div class="navbar-start">
+                <a class="navbar-item is-active">Home</a>
+                <a class="navbar-item">About Me</a>
+                <a class="navbar-item">Projects</a>
+                <a class="navbar-item">Expierence</a>
+                <a class="navbar-item">Contact</a>
+              </div>
+              
+                <div class="navbar-end">
+                  <div class="navbar-item">
+                    <div class="buttons">
+                      <a class="button is-primary is-inverted">
+                        <strong>Resume</strong>
+                      </a>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
+          </nav>
         </div>
-      </nav>
-      
-      <!-- Hero -->
-      <section class="hero is-primary is-fullheight-with-navbar is-bold">
-        <div class="hero-body">
-          <div class="container is-centered">
-            <h1 class="title">
-              Hey, I'm Joe.
-            </h1>
-            <h2 class="subtitle">
+        <div class="hero-body is-justified">
+          <div class="container">
+            <p class="subtitle">
+              Hey, my name is
+            </p>
+            <p class="title is-1">
+              Joe Conwell
+            </p>
+            <p class="title is-1 ">
               I'm an avid fan of cooking, coding, and cating. 
-            </h2>
+            </p>
           </div>
         </div>
       </section>
     </header>
+    
+    <!-- About Me -->
+    <section class="section">
+      <div class="container">
+        <div id="about" class="box">
+          <article class="media">
+            <div class="media-content">
+              <div class="content">
+                <p>
+                  <strong>Joe Conwell</strong>
+                  <br>
+                  Self-motivated and open-minded mathematics student, who fills their free time with personal projects. Those projects include late nights on Ableton (a popular DAW), early mornings kneading sourdough, and full afternoons constructing code from crypto-algorithms.
+                  <br>
+                  Drummer and musician for 10+ years. Professional cook for 4+ years.
+                </p>
+              </div>
+            </div>
+            <figure class="media-right">
+              <p class="image is-128x128 is-rounded">
+                <img src="https://bulma.io/images/placeholders/128x128.png" alt="Image">
+              </p>
+            </figure>
+          </article>
+        </div>
+      </div>
+    </section>
+      
+    <!-- Projects -->
 
-    <!-- Main -->
-    <main>
-      <!-- About Me -->
+    <!-- Experience -->
 
-      <!-- Projects -->
-
-      <!-- Experience -->
-
-      <!-- Contact -->
-    </main>
+    <!-- Contact -->
 
     <!-- Footer -->
-    <footer>
-      
+    <footer class="footer">
+      <div class="content has-text-centered">
+        <p>
+          <strong>Bulma</strong> by <a href="https://jgthms.com">Jeremy Thomas</a>. The source code is licensed
+          <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content
+          is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
+        </p>
+      </div>
     </footer>
   </body>
 </html>
