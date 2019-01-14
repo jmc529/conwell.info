@@ -1,18 +1,29 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Joseph Conwell</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.css">
+    <!-- <link rel="shortcut icon" href="resources/images/favicon.ico" type="image/x-icon"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../css/bulma.css">
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
     <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script defer src="../js/script.js"></script>
+    <style>
+      
+.hero {
+  background: black url(resources/images/flower.jpg) center / cover;
+}
+
+@media (max-width: 1024px) { .hero { background: black url(images/hero-2.jpg) center / cover; } }
+@media (max-width:  768px) { .hero { background: black url(images/hero-3.jpg) center / cover; } }
+
+    </style>
   </head>
   <body>
     <!-- Header -->
     <header> 
       <!-- Hero -->
-      <section class="hero is-primary is-fullheight is-bold">
+      <section class="hero is-fullheight" id="hero">
         <div class="hero head">
           <!-- Navbar -->
           <nav id="navbar" class="navbar is-fixed-top " role="navigation" aria-label="main navigation">
@@ -26,13 +37,13 @@
                 <span aria-hidden="true"></span>
               </a>
             </div>
-            <div id="navbarMenuHeroA" class="navbar-menu">
+            <div id="navbarMenuHero" class="navbar-menu">
               <div class="navbar-start">
-                <a class="navbar-item is-active">Home</a>
-                <a class="navbar-item">About Me</a>
-                <a class="navbar-item">Projects</a>
-                <a class="navbar-item">Expierence</a>
-                <a class="navbar-item">Contact</a>
+                <a class="navbar-item is-active" href="#hero">Home</a>
+                <a class="navbar-item" href="#about">About Me</a>
+                <a class="navbar-item" href="#projects">Projects</a>
+                <a class="navbar-item" href="#experience">Expierence</a>
+                <a class="navbar-item" href="#contact">Contact</a>
               </div>
               
                 <div class="navbar-end">
@@ -47,15 +58,15 @@
             </div>
           </nav>
         </div>
-        <div class="hero-body is-justified">
-          <div class="container">
-            <p class="subtitle">
-              Hey, my name is
+        <div class="hero-body">
+          <div class="container has-text-right">
+            <p class="subtitle has-text-white">
+              Hello, my name is
             </p>
-            <p class="title is-1">
+            <p class="title is-1 has-text-white">
               Joe Conwell
             </p>
-            <p class="title is-1 ">
+            <p class="title is-1 has-text-white">
               I'm an avid fan of cooking, coding, and cating. 
             </p>
           </div>
@@ -64,45 +75,90 @@
     </header>
     
     <!-- About Me -->
-    <section class="section">
-      <div class="container">
-        <div id="about" class="box">
-          <article class="media">
-            <div class="media-content">
-              <div class="content">
-                <p>
-                  <strong>Joe Conwell</strong>
-                  <br>
-                  Self-motivated and open-minded mathematics student, who fills their free time with personal projects. Those projects include late nights on Ableton (a popular DAW), early mornings kneading sourdough, and full afternoons constructing code from crypto-algorithms.
-                  <br>
-                  Drummer and musician for 10+ years. Professional cook for 4+ years.
-                </p>
+    <section id="about" class="section">
+      <div class="tile is-ancestor is-mobile">
+        <div class="tile">
+          <div class="tile is-vertical is-8">
+            <div class="tile is-parent">
+              <div class="tile is-child box">
+                <div class="content">
+                  <p>
+                    <strong>Joe Conwell</strong>
+                    <br>
+                    Self-motivated and open-minded mathematics student, who fills their free time with personal projects. Those projects include late nights on Ableton (a popular DAW), early mornings kneading sourdough, and full afternoons constructing code from crypto-algorithms.
+                    <br>
+                    Drummer and musician for 10+ years. Professional cook for 4+ years.
+                  </p>
+                </div>
               </div>
             </div>
-            <figure class="media-right">
-              <p class="image is-128x128 is-rounded">
-                <img src="https://bulma.io/images/placeholders/128x128.png" alt="Image">
-              </p>
-            </figure>
-          </article>
+            <div class="tile">
+              <div class="tile is-parent is-vertical">
+                <div class="tile is-child box">
+                  
+                </div>
+                <div class="tile is-child box">
+                  
+                </div>
+              </div>
+              <div class="tile is-parent is-vertical">
+                <div class="tile is-child box">
+                  
+                </div>
+                <div class="tile is-child box">
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tile is-parent is-4">
+            <div class="tile is-child box">
+              <figure class="image is-rounded">
+                <img src="/resources/images/joe-food.jpg" alt="Image">
+              </figure>
+            </div>
+          </div>
         </div>
       </div>
     </section>
-      
+
     <!-- Projects -->
-
+    <div id="projects" class="section">
+      <div class="columns is-mobile is-multiline">
+        <div class="column is-one-third">
+          <div class="card">
+            <div class="card-image"></div>
+            <div class="card-content"></div>
+          </div>
+        </div>
+        <div class="column is-one-third">
+          <div class="card">
+            <div class="card-image"></div>
+            <div class="card-content"></div>
+          </div>
+        </div>
+        <div class="column is-one-third">
+          <div class="card">
+            <div class="card-image"></div>
+            <div class="card-content"></div>
+          </div>
+        </div>
+      </div>
+    </div>
     <!-- Experience -->
-
+    <div id="experience" class="section">
+      
+    </div>
     <!-- Contact -->
-
+    <div id="contact" class="section">
+      <div class="box notification is-primary">
+        
+      </div>
+    </div>
     <!-- Footer -->
     <footer class="footer">
-      <div class="content has-text-centered">
-        <p>
-          <strong>Bulma</strong> by <a href="https://jgthms.com">Jeremy Thomas</a>. The source code is licensed
-          <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content
-          is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
-        </p>
+      <div class="level">
+        
       </div>
     </footer>
   </body>
