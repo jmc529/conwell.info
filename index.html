@@ -2,11 +2,13 @@
 <html>
   <head>
     <title>Joseph Conwell</title>
-    <!-- <link rel="shortcut icon" href="resources/images/favicon.ico" type="image/x-icon"> -->
+    <link rel="shortcut icon" href="resources/images/clover.png"> -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Stylesheets and Icons -->
     <link rel="stylesheet" href="../css/bulma.css">
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
-    <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+    <!-- Script -->
     <script defer src="../js/script.js"></script>
     <style>
       
@@ -14,16 +16,25 @@
   background: black url(resources/images/hero.jpg) center / cover;
 }
 
+@media (max-width:  768px) { .hero { background: black url(resources/images/hero-phone.jpg) center / cover; } }
+
+.navbar {
+  transition: top 0.3s;
+}
+
+}
+
+a svg:hover #lua-icon {
+  fill: #05836e;
+}
+
     </style>
   </head>
   <body>
     <!-- Header -->
     <header> 
-      <!-- Hero -->
-      <section class="hero is-fullheight" id="hero">
-        <div class="hero head">
-          <!-- Navbar -->
-          <nav id="navbar" class="navbar is-fixed-top " role="navigation" aria-label="main navigation">
+      <!-- Navbar -->
+          <nav id="navbar" class="navbar is-fixed-top is-primary" role="navigation" aria-label="main navigation">
             <div class="navbar-brand">
               <!-- <a class="navbar-item" href="https://bulma.io">
                 <img src="../resources/images/icon.png" width="112" height="28">
@@ -34,7 +45,7 @@
                 <span aria-hidden="true"></span>
               </a>
             </div>
-            <div id="navbarMenuHero" class="navbar-menu">
+            <div id="navbarMenu" class="navbar-menu">
               <div class="navbar-start">
                 <a class="navbar-item is-active" href="#hero">Home</a>
                 <a class="navbar-item" href="#about">About Me</a>
@@ -46,7 +57,7 @@
                 <div class="navbar-end">
                   <div class="navbar-item">
                     <div class="buttons">
-                      <a class="button is-primary is-inverted">
+                      <a class="button is-primary">
                         <strong>Resume</strong>
                       </a>
                   </div>
@@ -54,7 +65,9 @@
               </div>
             </div>
           </nav>
-        </div>
+
+      <!-- Hero -->
+      <section id="hero" class="hero is-fullheight">
         <div class="hero-body">
           <div class="container has-text-right">
             <p class="subtitle has-text-white">
@@ -62,9 +75,11 @@
             </p>
             <p class="title is-1 has-text-white">
               Joe Conwell
+              <hr>
             </p>
             <p class="title is-1 has-text-white">
-              I'm an avid fan of cooking, coding, and cating. 
+              cook, coder, 
+              <br>and cat-dad 
             </p>
           </div>
         </div>
@@ -91,15 +106,32 @@
             </div>
             <div class="tile">
               <div class="tile is-parent is-vertical">
-                <div class="tile is-child box">
-                  
+                <div id="programming-langs" class="tile is-child box">
+                  <a href="https://www.lua.org/">
+                    <svg height="3em" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                      <path id="lua-icon" fill="#fa7c91"
+                      d="M1022.892 131.584c0 72.064-58.398 130.488-130.542 130.488-72.05 0-130.458-58.422-130.458-130.488C761.892 59.418 820.3 1 892.35 1c72.144 0 130.542 58.418 130.542 130.584zM687.354 701.48l-36.862 5.588c-28.098 3.992-40.954 14.892-40.954 34.134 0 22.86 13.294 35.266 36.96 35.266 26.41 0 51.746-12.84 61.766-31.648 2.752-5.222 2.752-6.46 2.752-16.922v-10.012l0.442-24.04v-0.434c-0.442 0-2.038 1.248-3.194 2.046-2.386 2.39-9.66 4.434-20.91 6.022z m204.996-124.18c0 246.156-199.508 445.7-445.618 445.7C200.606 1023 1.106 823.458 1.106 577.3c0-246.18 199.5-445.716 445.626-445.716 246.11 0 445.618 199.538 445.618 445.716z m-564.302 187.916H181.998v-253.08H142.292v288.012h185.756v-34.932z m203.758-174.894H496.1V713.538c0 11.168-6.038 29.254-13.654 40.514-8.866 13.552-24.904 21.626-42.542 21.626-28.098 0-42.092-14.792-42.092-44.936v-140.42h-35.73v156.094c0 35.292 28.544 59.754 69.048 59.754 30.834 0 51.664-11.608 66.564-36.52v30.5h34.11V590.322z m239.042 183.768c-5.672 1.148-8.432 1.588-11.702 1.588-7.972 0-11.616-3.632-11.616-12.398v-119.948c0-36.96-29.686-59.046-79.412-59.046-54.506 0-83.036 23.324-84.998 69.866h32.894c3.984-28.554 18.418-40.522 48.114-40.522 32.438 0 48.568 11.966 48.568 35.292 0 21.628-2.834 23.216-60.626 29.244-19.674 1.606-26.05 2.844-36.054 6.038-27.298 8.856-43.348 31.292-43.348 60.188 0 38.464 26.51 61.782 70.198 61.782 26.86 0 45.278-8.864 71.43-33.694 1.146 21.288 12.406 31.648 33.686 31.648 7.964 0 12.048-0.798 22.868-3.974v-26.064z m-8.958-381.444c0-72.074-58.488-130.576-130.548-130.576-72.052 0-130.542 58.502-130.542 130.576 0 72.068 58.49 130.57 130.542 130.57 72.06 0 130.548-58.502 130.548-130.57z"/>
+                    </svg>
+                  </a>
+                  <a href="https://www.python.org/" class="icon is-large">
+                    <i class="fab fa-python fa-3x"></i>
+                  </a>
+                  <a href="https://www.oracle.com/technetwork/java/javase/overview/index.html" class="icon is-large">
+                    <i class="fab fa-java fa-3x"></i>
+                  </a>
+                  <a href="https://www.javascript.com/" class="icon is-large">
+                    <i class="fab fa-js-square fa-3x"></i>
+                  </a>
+                  <a href="http://www.cplusplus.com/" class="icon is-large">
+                    <i class="devicon-cplusplus-plain" style="font-size: 3em"></i>
+                  </a>
                 </div>
-                <div class="tile is-child box">
-                  
+                <div id="frameworks" class="tile is-child box">
+                  (a[class="icon is-large"]>i.fas)*5
                 </div>
               </div>
               <div class="tile is-parent is-vertical">
-                <div class="tile is-child box">
+                <div id="software" class="tile is-child box">
                   
                 </div>
                 <div class="tile is-child box">
