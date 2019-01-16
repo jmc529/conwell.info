@@ -12,10 +12,10 @@
     <style>
       
 .hero {
-  background: black url(resources/images/hero.jpg) center / cover;
+  background: black url(/resources/images/hero.JPG) center / cover;
 }
 
-@media (max-width:  768px) { .hero { background: black url(/resources/images/hero-phone.jpg) center / cover; } }
+@media (max-width:  768px) { .hero { background: black url(/resources/images/hero-phone.JPG) center / cover; } }
 
 .navbar {
   transition: top 0.3s;
@@ -31,13 +31,25 @@ i {
   background-color: #d1d3c5;
 }
 
-.ico {
-  font-size: 3em;
+.svg {
+  height: .87em;
+  width: .87em;
 }
 
-.svg {
-  height: 3em;
-  width: 3em;
+.custom_button {
+  font-size: 3em;
+  background-color: #f5f5f5;
+  display: inline-flex;
+  height: 1.5em;
+  width: 1.5em;
+  justify-content: center;
+  align-items: center;
+  border-radius: .2em;
+  margin: .1em;
+}
+
+.custom_button:hover {
+  background-color: #eeeeee;
 }
 
     </style>
@@ -124,69 +136,96 @@ i {
             <div class="tile">
               <div class="tile is-parent is-vertical">
                 <div id="programming-langs" class="tile is-child box">
-                  <a href="https://www.lua.org/">
-                    <img src="resources/svgs/lua.svg" alt="lua icon" class="svg">
-                  </a>
-                  <a href="https://www.python.org/" class="ico">
-                    <i class="devicon-python-plain-wordmark colored"></i>
-                  </a>
-                  <a href="https://www.oracle.com/technetwork/java/javase/overview/index.html" class="ico">
-                    <i class="devicon-java-plain-wordmark colored"></i>
-                  </a>
-                  <a href="https://www.javascript.com/" class="ico">
-                    <i class="devicon-javascript-plain colored"></i>
-                  </a>
-                  <a href="http://www.cplusplus.com/" class="ico">
-                    <i class="devicon-cplusplus-plain colored"></i>
-                  </a>
-                </div>
-                <div id="frameworks" class="tile is-child box">
-                  <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" class="ico"> 
-                    <i class="devicon-html5-plain-wordmark colored"></i>
-                  </a>
-                  <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" class="ico">
-                    <i class="devicon-css3-plain-wordmark colored"></i>
-                   </a>
-                  <a href="https://sass-lang.com/" class="ico">
-                    <i class="devicon-sass-original colored"></i>
-                  </a>
-                  <a href="https://nodejs.org/" class="ico">
-                    <i class="devicon-nodejs-plain colored"></i>
-                  </a>
-                  <a href="https://jquery.com/" class="ico">
-                    <i class="devicon-jquery-plain-wordmark colored"></i>
-                  </a>
-                </div>
-              </div>
-              <div class="tile is-parent is-vertical">
-                <div id="software" class="tile is-child box">
-                  <a href="https://git-scm.com/" class="ico">
-                    <i class="devicon-git-plain-wordmark colored"></i>
-                  </a>
-                  <a href="https://github.com/" class="ico">
-                    <i class="devicon-github-plain-wordmark colored"></i>
-                  </a>
-                  <a href="" class="ico">
-                    <i class="devicon-mongodb-plain-wordmark colored"></i>
-                  </a>
-                  <a href="https://love2d.org/">
-                    <img class="svg" src="resources/svgs/love2d.svg" alt="love2d icon">
-                  </a>
-                  <a href="https://firebase.google.com/">
-                    <img class="svg" src="/resources/svgs/firebase.svg" alt="firebase icon">
-                  </a>
-                  <a href="https://getpaint.net/">
-                    <img class="svg" src="/resources/svgs/paint-net.svg" alt="paint.net icon">
-                  </a>
-                  <a href="https://gimp.org/">
-                    <img class="svg" src="/resources/svgs/gimp.svg" alt="gimp icon">
-                  </a>
-                  <a href="">
-                    <i class="devicon-heroku-plain-wordmark colored"></i>
-                  </a>
-                  <a href="">
-                     <i class="devicon-slack-plain-wordmark colored"></i>
-                  </a>
+                  <span class="content">
+                    <a target="_blank" href="https://www.lua.org/" class="custom_button">
+                      <img class="svg" src="resources/svgs/lua.svg" alt="lua icon" >
+                    </a>
+                  </span>
+                  <span class="content">
+                    <a target="_blank" href="https://www.python.org/" class="custom_button">
+                      <i class="devicon-python-plain-wordmark colored"></i>
+                    </a>
+                  </span>
+                  <span class="content">
+                    <a target="_blank" href="https://www.oracle.com/technetwork/java/javase/overview/index.html" class="custom_button">
+                      <i class="devicon-java-plain-wordmark colored"></i>
+                    </a>
+                  </span>
+                  <span class="content">
+                    <a target="_blank" href="https://www.javascript.com/" class="custom_button">
+                      <i class="devicon-javascript-plain colored"></i>
+                    </a>
+                  </span>
+                  <span class="content">
+                    <a target="_blank" href="http://www.cplusplus.com/" class="custom_button">
+                      <i class="devicon-cplusplus-plain colored"></i>
+                    </a>
+                  </span>
+                  <span class="content">
+                    <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/HTML" class="custom_button">
+                      <i class="devicon-html5-plain-wordmark colored"></i>
+                    </a>
+                  </span>
+                  <span class="content">
+                    <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS" class="custom_button">
+                      <i class="devicon-css3-plain-wordmark colored"></i>
+                    </a>
+                  </span>
+                  <span class="content">
+                    <a target="_blank" href="https://sass-lang.com/" class="custom_button">
+                      <i class="devicon-sass-original colored"></i>
+                    </a>
+                  </span>
+                  <span class="content">
+                    <a target="_blank" href="https://nodejs.org/" class="custom_button">
+                      <i class="devicon-nodejs-plain colored"></i>
+                    </a>
+                  </span>
+                  <span class="content">
+                    <a target="_blank" href="https://jquery.com/" class="custom_button">
+                      <i class="devicon-jquery-plain-wordmark colored"></i>
+                    </a>
+                  </span>
+                  <span class="content">
+                    <a target="_blank" href="https://git-scm.com/" class="custom_button">
+                      <i class="devicon-git-plain-wordmark colored"></i>
+                    </a>
+                  </span>
+                  <span class="content">
+                    <a target="_blank" href="https://github.com/" class="custom_button">
+                      <i class="devicon-github-plain-wordmark colored"></i>
+                    </a>
+                  </span>
+                  <span class="content">
+                    <a target="_blank" href="https://mongodb.com/" class="custom_button">
+                      <i class="devicon-mongodb-plain-wordmark colored"></i>
+                    </a>
+                  </span>
+                  <span class="content">
+                    <a target="_blank" href="https://love2d.org/" class="custom_button">
+                      <img class="svg" src="resources/svgs/love2d.svg" alt="love2d icon">
+                    </a>
+                  </span>
+                  <span class="content">
+                    <a target="_blank" href="https://firebase.google.com/" class="custom_button">
+                      <img class="svg" src="/resources/svgs/firebase.svg" alt="firebase icon">
+                    </a>
+                  </span>
+                  <span class="content">
+                    <a target="_blank" href="https://getpaint.net/" class="custom_button">
+                      <img class="svg" src="/resources/svgs/paint-net.svg" alt="paint.net icon">
+                    </a>
+                  </span>
+                  <span class="content">
+                    <a target="_blank" href="https://gimp.org/" class="custom_button">
+                      <img class="svg" src="/resources/svgs/gimp.svg" alt="gimp icon">
+                    </a>
+                  </span>
+                  <span class="content">
+                    <a target="_blank" href="https://heroku.com/" class="custom_button">
+                      <i class="devicon-heroku-plain-wordmark colored"></i>
+                    </a>
+                  </span>
                 </div>
               </div>
             </div>
