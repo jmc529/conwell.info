@@ -7,6 +7,7 @@
     <!-- Stylesheets and Icons -->
     <link rel="stylesheet" href="../css/bulma.css">
     <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
     <!-- Script -->
     <script defer src="../js/script.js"></script>
     <style>
@@ -15,7 +16,10 @@
   background: black url(/resources/images/hero.JPG) center / cover;
 }
 
-@media (max-width:  768px) { .hero { background: black url(/resources/images/hero-phone.JPG) center / cover; } }
+@media (max-width:  768px) {
+  .hero { background: black url(/resources/images/hero-phone.JPG) center / cover; }
+  #contact-icons li { display: inline; }
+}
 
 .navbar {
   transition: top 0.3s;
@@ -52,6 +56,10 @@ i {
   background-color: #eeeeee;
 }
 
+
+#contact-icons li a {
+  text-decoration: none;
+}
     </style>
   </head>
   <body>
@@ -103,8 +111,12 @@ i {
             </p>
             <p class="title is-1 has-text-white">
               cook, coder, 
-              <br>and cat-dad 
+              <br>and cat-dad
             </p>
+            <br>
+            <a href="mailto:jmc529@vt.edu" class="button is-large is-outlined is-primary is-inverted">
+              <strong>Contact</strong>
+            </a>
           </div>
         </div>
       </section>
@@ -124,8 +136,6 @@ i {
               <div class="tile is-child box">
                 <div class="content">
                   <p>
-                    <strong>Joe Conwell</strong>
-                    <br>
                     Self-motivated and open-minded mathematics student, who fills their free time with personal projects. Those projects include late nights on Ableton (a popular DAW), early mornings kneading sourdough, and full afternoons constructing code from crypto-algorithms.
                     <br>
                     Drummer and musician for 10+ years. Professional cook for 4+ years.
@@ -217,8 +227,13 @@ i {
                     </a>
                   </span>
                   <span class="content">
+                    <a target="_blank" href="https://vuejs.org/" class="custom_button">
+                      <i class="devicon-vuejs-plain-wordmark colored"></i>
+                    </a>
+                  </span>
+                  <span class="content">
                     <a target="_blank" href="https://gimp.org/" class="custom_button">
-                      <img class="svg" src="/resources/svgs/gimp.svg" alt="gimp icon">
+                      <i class="devicon-gimp-plain colored"></i>
                     </a>
                   </span>
                   <span class="content">
@@ -326,8 +341,83 @@ i {
           Contact
         </p>
       </div>
-      <div class="box notification is-primary">
-        
+      <div class="level">
+        <div class="level-item">
+          <form class="columns" action="https://formspree.io/jmc529@vt.edu" method="POST">
+            <div class="column">
+              <div class="field">
+                <p class="control has-icons-left">
+                  <input class="input" type="email" name="_replyto" placeholder="Email">
+                  <span class="icon is-small is-left">
+                      <i class="fas fa-envelope"></i>
+                  </span>
+                </p>
+              </div>
+              <div class="field">
+                <p class="control has-icons-left">
+                  <input class="input" type="name" name="name" placeholder="Name">
+                  <span class="icon is-small is-left">
+                    <i class="fas fa-user"></i>
+                  </span>
+                </p>
+              </div>
+              <div class="field">
+                <p class="control">
+                  <input class="button is-success is-fullwidth" type="submit" value="Send">
+                </p>
+              </div>
+            </div>
+            <div class="column">
+              <div class="field">
+                <div class="control">
+                  <textarea class="textarea" rows="4" type="message" name="message" placeholder="Message"></textarea>
+                </div>
+              </div>
+            </div>
+            <!-- Subject Line -->
+            <input type="hidden" name="_subject" value="github pages message" />
+            <!-- Bot Proofing -->
+            <input type="text" name="_gotcha" style="display:none" />
+          </form>
+        </div>
+        <div class="level-item">
+          <div class="notification is-info">
+            <div class="columns is-vcentered"">
+              <div class="column">
+                <p>
+                  Let's link up!
+                  <br>
+                  I try to get back to emails
+                  as fast as possible, if you
+                  <br>
+                  want to reach out send me a
+                  message here or on some
+                  <br>
+                  other platform.
+                </p>
+              </div>
+              <div class="column">
+                <ul id="contact-icons" class="content has-text-centered">
+                  <li>
+                    <a class="icon is-large" href="mailto:jmc529@vt.edu" target="_blank">
+                      <i class="fas fa-envelope fa-2x"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="icon is-large" href="https://github.com/jmc529" target="_blank">
+                      <i class="fab fa-github fa-2x"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="icon is-large" href="https://www.linkedin.com/in/joe-conwell/" target="_blank">
+                      <i class="fab fa-linkedin fa-2x"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
     
