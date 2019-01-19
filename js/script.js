@@ -18,20 +18,29 @@ document.addEventListener('DOMContentLoaded', () => {
         el.classList.toggle('is-active');
         $target.classList.toggle('is-active');
 
+        //if menu is open
+        if ($target.classList.contains('is-active')) {
+          $target.addEventListener('click', () => {
+            //close menu on click
+            el.classList.remove('is-active');
+            $target.classList.remove('is-active');
+            //hide navbar (issue when going from bottom to top)
+          });
+        }
       });
     });
   }
 
 });
 
-/* When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar */
+/* When the user scrolls down, hide the navbar. When the user scrolls up or is at the top of DOM, show the navbar */
 var prevScrollpos = window.pageYOffset;
 window.onscroll = function() {
   var currentScrollPos = window.pageYOffset;
-  if (prevScrollpos > currentScrollPos) {
+  if (prevScrollpos > currentScrollPos || currentScrollPos <= 0) {
     document.getElementById("navbar").style.top = "0";
   } else {
     document.getElementById("navbar").style.top = "-50px";
   }
   prevScrollpos = currentScrollPos;
-} 
+}
