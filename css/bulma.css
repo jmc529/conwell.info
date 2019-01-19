@@ -9,6 +9,60 @@
     transform: rotate(359deg);
   }
 }
+
+
+
+.hero {
+  background: black url(/resources/images/hero.JPG) center / cover;
+}
+
+@media (max-width:  768px) {
+  .hero { background: black url(/resources/images/hero-phone.JPG) center / cover; }
+  #contact-icons li { display: inline; }
+}
+
+.navbar {
+  transition: top 0.3s;
+}
+
+#grey-section {
+  background-color: #d1d3c5;
+}
+
+.svg {
+  height: .87em;
+  width: .87em;
+}
+
+.custom_button {
+  font-size: 3em;
+  background-color: #f5f5f5;
+  display: inline-flex;
+  height: 1.5em;
+  width: 1.5em;
+  justify-content: center;
+  align-items: center;
+  border-radius: .2em;
+  margin: .1em;
+}
+
+.custom_button:hover {
+  background-color: #eeeeee;
+}
+
+
+#contact-icons li a {
+  text-decoration: none;
+}
+
+#tile-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/*Bulma*/
 .tabs, .pagination-previous,
 .pagination-next,
 .pagination-link,

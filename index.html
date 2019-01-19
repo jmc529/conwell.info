@@ -11,6 +11,7 @@
       gtag('config', 'UA-131468646-1');
     </script>
 
+    <!-- Meta-->
     <title>Joseph Conwell</title>
     <link rel="shortcut icon" href="resources/svgs/clover.svg">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -20,60 +21,6 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
     <!-- Script -->
     <script defer src="../js/script.js"></script>
-
-    <style>
-      
-.hero {
-  background: black url(/resources/images/hero.JPG) center / cover;
-}
-
-@media (max-width:  768px) {
-  .hero { background: black url(/resources/images/hero-phone.JPG) center / cover; }
-  #contact-icons li { display: inline; }
-}
-
-.navbar {
-  transition: top 0.3s;
-}
-
-}
-
-#about, #experience {
-  background-color: #d1d3c5;
-}
-
-.svg {
-  height: .87em;
-  width: .87em;
-}
-
-.custom_button {
-  font-size: 3em;
-  background-color: #f5f5f5;
-  display: inline-flex;
-  height: 1.5em;
-  width: 1.5em;
-  justify-content: center;
-  align-items: center;
-  border-radius: .2em;
-  margin: .1em;
-}
-
-.custom_button:hover {
-  background-color: #eeeeee;
-}
-
-
-#contact-icons li a {
-  text-decoration: none;
-}
-
-#tile-image {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-    </style>
   </head>
   <body>
     <!-- Header -->
@@ -136,7 +83,7 @@
     </header>
     
     <!-- About Me -->
-    <section class="section">
+    <section id="grey-section" class="section">
       <div id="about" class="content has-text-centered">
         <p class="subtitle is-1">
           About Me
@@ -206,9 +153,7 @@
                     <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS" class="custom_button">
                       <i class="devicon-css3-plain-wordmark colored"></i>
                     </a>
-                    <a target="_blank" href="https://sass-lang.com/" class="custom_button">
-                      <i class="devicon-sass-original colored"></i>
-                    </a><a target="_blank" href="https://firebase.google.com/" class="custom_button">
+                    <a target="_blank" href="https://firebase.google.com/" class="custom_button">
                       <img class="svg" src="/resources/svgs/firebase.svg" alt="firebase icon">
                     </a>
                     <a target="_blank" href="https://heroku.com/" class="custom_button">
@@ -326,7 +271,7 @@
     </section>
 
     <!-- Experience -->
-    <section class="section">
+    <section id="grey-section" class="section">
       <div id="experience" class="content has-text-centered">
         <p class="subtitle is-1">
           Experience
