@@ -12,7 +12,7 @@ export default {
         content: "A portfolio and personal blog of Joseph Conwell's.",
       },
       { hid: 'title', name: 'title', content: "Joseph Conwell's Portfolio" },
-      // { hid: 'image', name: 'image', content: '~static/sitemeta.svg' },
+      { hid: 'image', name: 'image', content: '~static/sitemeta.svg' },
       { hid: 'url', name: 'url', content: 'https://conwell.info' },
     ],
     link: [
