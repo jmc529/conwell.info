@@ -31,12 +31,11 @@
       <template #end>
         <b-navbar-item tag="div" class="navbar-item">
           <div class="buttons">
-            <button id="registerButton" class="button is-primary">
-              <!-- <a :href="require('~assets/conwellJoseph.pdf')" download></a> -->
-              <a
-                href="https://www.linkedin.com/in/joe-conwell/detail/overlay-view/urn:li:fsd_profileTreasuryMedia:(ACoAACG-46YBbWcCpFWp8TorjcPokxnCWMYdxjQ,1613436263151)/"
-                target="_blank"
-              ></a>
+            <button
+              id="registerButton"
+              class="button is-primary"
+              @click="resume"
+            >
               <strong>Resume</strong>
             </button>
           </div>
@@ -106,6 +105,9 @@ export default {
         el.style.top = `-${el.offsetHeight.toString()}px`
       }
       this.prevScrollpos = currentScrollPos
+    },
+    resume() {
+      window.open('/conwellJoseph.pdf', '_blank')
     },
   },
 }
