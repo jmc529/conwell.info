@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-131468646-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-131468646-1');
+    </script>
+
+    <!-- Meta-->
+    <title>Joseph Conwell</title>
+    <link rel="shortcut icon" href="resources/svgs/clover.svg">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="canonical" href="https://conwell.tech/">
+    <meta property="og:title" content="Joseph Conwell's Portfolio">
+    <meta property="og:image" content="resources/images/hero.JPG">
+    <meta charset="UTF-8">
+    <!-- Stylesheets and Icons -->
+    <link rel="stylesheet" href="./css/bulma.css">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <!-- Script -->
+    <script defer src="../js/script.js"></script>
+  </head>
+  <body>
+    <!-- Header -->
+    <header> 
+      <!-- Navbar -->
+          <nav id="navbar" class="navbar is-fixed-top is-primary" role="navigation" aria-label="main navigation">
+            <div class="navbar-brand">
+              <span class="navbar-item">
+                <img alt="Clover" src="resources/svgs/clover.svg"/>
+              </span>
+              <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarMenu">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+              </a>
+            </div>
+            <div id="navbarMenu" class="navbar-menu">
+              <div class="navbar-start">
+                <a class="navbar-item" href="#hero">Home</a>
+                <a class="navbar-item" href="#about">About Me</a>
+                <a class="navbar-item" href="#projects">Projects</a>
+                <a class="navbar-item" href="#experience">Experience</a>
+                <a class="navbar-item" href="#contact">Contact</a>
+              </div>
+              
+                <div class="navbar-end">
+                  <div class="navbar-item">
+                    <div class="buttons">
+                      <a class="button is-primary" href="./resume.html">
+                        <strong>Resume</strong>
+                      </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </nav>
+
+      <!-- Hero -->
+      <section class="hero is-fullheight">
+        <div id="hero" class="hero-body">
+          <div class="container has-text-right">
+            <p class="subtitle has-text-white">
+              Hello, my name is
+            </p>
+            <p class="title is-1 has-text-white">
+              Joe Conwell
+              <hr>
+            </p>
+            <p class="subtitle has-text-white">
+              I am a
+            </p>
+            <p class="title is-1 has-text-white">
+              cook, coder, and cat-dad
+            </p>
+            <br>
+            <a href="mailto:jmc529@vt.edu" class="button is-large is-outlined is-primary is-inverted">
+              <strong>Contact</strong>
+            </a>
+          </div>
+        </div>
+      </section>
+    </header>
+    
+    <!-- About Me -->
+    <section id="grey-section" class="section">
+      <div id="about" class="content has-text-centered">
+        <p class="subtitle is-1">
+          About Me
+        </p>
+      </div>
+      <div class="tile is-ancestor is-mobile">
+        <div class="tile">
+          <div class="tile is-vertical is-8">
+            <div class="tile is-parent">
+              <div class="tile is-child box">
+                <div class="content">
+                  <p>
+                    I like to think of myself as an openminded person. The kind of person that tries a different item off the menu each time I go back to a restaurant. I am currently a mathematics student at Virginia Tech with a minor in computer science and philosophy. I was recently grant funded for a project my team calls <a href="evolutionEd.gitlab.io">"EvolutionEd"</a>. I am somewhat of an avid cook, last year I started a sourdough mother and a kombucha mother (both are now dead RIP).
+                    <br>
+                    Drummer and musician for 10+ years. Professional cook for 4+ years. Researcher for 1+ years.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="tile">
+              <div class="tile is-parent is-vertical">
+                <div id="programming-langs" class="tile is-child box">
+                  <span class="content">
+                    <p class="subtitle is-4">Programming Languages</p>
+                    <a target="_blank" href="https://www.lua.org/" class="custom_button">
+                      <img class="svg" src="resources/svgs/lua.svg" alt="lua icon" >
+                    </a>
+                    <a target="_blank" href="https://www.python.org/" class="custom_button">
+                      <i class="devicon-python-plain-wordmark colored"></i>
+                    </a>
+                    <a target="_blank" href="https://www.oracle.com/technetwork/java/javase/overview/index.html" class="custom_button">
+                      <i class="devicon-java-plain-wordmark colored"></i>
+                    </a>
+                    <a target="_blank" href="https://www.javascript.com/" class="custom_button">
+                      <i class="devicon-javascript-plain colored"></i>
+                    </a>
+                    <a target="_blank" href="https://docs.microsoft.com/en-us/dotnet/csharp/" class="custom_button">
+                      <i class="devicon-csharp-plain colored"></i>
+                    </a>
+                    <a target="_blank" href="https://www.cplusplus.com/" class="custom_button">
+                      <i class="devicon-cplusplus-plain colored"></i>
+                    </a>
+                  </span>
+                </div>
+                <div id="libraries-frameworks" class="tile is-child box">
+                  <span class="content">
+                    <p class="subtitle is-4">Libraries and Frameworks</p>
+                    <a target="_blank" href="https://nodejs.org/" class="custom_button">
+                      <i class="devicon-nodejs-plain colored"></i>
+                    </a>
+                    <a target="_blank" href="https://jquery.com/" class="custom_button">
+                      <i class="devicon-jquery-plain-wordmark colored"></i>
+                    </a>
+                    <a target="_blank" href="https://love2d.org/" class="custom_button">
+                      <img class="svg" src="resources/svgs/love2d.svg" alt="love2d icon">
+                    </a>
+                    <a target="_blank" href="https://vuejs.org/" class="custom_button">
+                      <i class="devicon-vuejs-plain-wordmark colored"></i>
+                    </a>
+                  </span>
+                </div>
+              </div>
+              <div class="tile is-parent is-vertical">
+                <div id="web-development" class="tile is-child box">
+                  <span class="content">
+                    <p class="subtitle is-4">Web Development</p>
+                    <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/HTML" class="custom_button">
+                      <i class="devicon-html5-plain-wordmark colored"></i>
+                    </a>
+                    <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS" class="custom_button">
+                      <i class="devicon-css3-plain-wordmark colored"></i>
+                    </a>
+                    <a target="_blank" href="https://firebase.google.com/" class="custom_button">
+                      <img class="svg" src="/resources/svgs/firebase.svg" alt="firebase icon">
+                    </a>
+                    <a target="_blank" href="https://heroku.com/" class="custom_button">
+                      <i class="devicon-heroku-plain-wordmark colored"></i>
+                    </a>
+                  </span>
+                </div>
+                <div id="development" class="tile is-child box">
+                  <span class="content">
+                    <p class="subtitle is-4">Development</p>
+                    <a target="_blank" href="https://sublimetext.com/" class="custom_button">
+                      <img class="svg" src="/resources/svgs/sublime.svg" alt="sublime icon">
+                    </a>
+                    <a target="_blank" href="https://unrealengine.com/" class="custom_button">
+                      <img class="svg" src="resources/svgs/unreal.svg" alt="unrealengine icon">
+                    </a>                    
+                    <a target="_blank" href="https://unity.com/" class="custom_button">
+                      <img class="svg" src="resources/svgs/unity.svg" alt="unity icon">
+                    </a>
+                    <a target="_blank" href="https://gimp.org/" class="custom_button">
+                      <i class="devicon-gimp-plain colored"></i>
+                    </a>
+                    
+                    <a target="_blank" href="https://git-scm.com/" class="custom_button">
+                      <i class="devicon-git-plain-wordmark colored"></i>
+                    </a>
+                    <a target="_blank" href="https://mongodb.com/" class="custom_button">
+                      <i class="devicon-mongodb-plain-wordmark colored"></i>
+                    </a>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tile is-parent is-4">
+            <div id="tile-image" class="tile is-child box">
+              <figure class="image">
+                <img src="./resources/images/joe-food.jpg" alt="joe munching">
+              </figure>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section class="section">
+      <div id="projects" class="content has-text-centered">
+        <p class="subtitle is-1">
+          Featured Projects
+        </p>
+      </div>
+      <div class="columns is-multiline">
+        <div class="column">
+          <div class="card">
+            <div class="card-image">
+              <a href="https://vthacks.com/">
+                <figure class="image">
+                  <img src="/resources/images/vthacks.png" alt="vthacks banner">
+                </figure>  
+              </a>
+            </div>
+            <div class="card-content">
+              <div class="content">
+                <p class="subtitle is-4">
+                  VTHacks
+                </p>
+                <p>
+                  VTHacks is an organization that hosts MLH certified hackathons at Virginia Tech. I work on maintaining and building upon their website with a few other developers.
+                </p>
+                <div class="level is-mobile">
+                  <div class="level-left">
+                    <div class="level-item"><span class="tag is-dark">VueJS</span></div>
+                    <div class="level-item"><span class="tag is-dark">JavaScript</span></div>
+                    <div class="level-item"><span class="tag is-dark">HTML</span></div>
+                    <div class="level-item"><span class="tag is-dark">CSS</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="column">
+          <div class="card">
+            <div class="card-image">
+              <a href="https://github.com/jmc529/m3">
+                <figure class="image">
+                  <img src="/resources/images/M3.png" alt="M3 banner">
+                </figure>  
+              </a>
+            </div>
+            <div class="card-content">
+              <div class="content">
+                <p class="subtitle is-4">
+                  M3: A Mini Modular Music Player
+                </p>
+                <p>
+                  M3 is a project I started Janurary 2019 after using and feeling disatisfied with the current webapp musicplayers that were available. It is still in development.
+                </p>
+                <div class="level is-mobile">
+                  <div class="level-left">
+                    <div class="level-item"><span class="tag is-dark">JavaScript</span></div>
+                    <div class="level-item"><span class="tag is-dark">HTML</span></div>
+                    <div class="level-item"><span class="tag is-dark">CSS</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="column">
+          <div class="card">
+            <div class="card-image">
+              <a href="https://github.com/jmc529/spaceinvaders">
+                <figure class="image">
+                  <img src="/resources/images/spaceinvaders.png" alt="spaceinvaders banner">
+                </figure>
+              </a>
+            </div>
+            <div class="card-content">
+              <div class="content">
+                <p class="subtitle is-4">
+                  Space Invaders
+                </p>
+                <p>
+                  This project was originally intended as a comparison for Entity Component System vs Object Oriented design in video games. I unfortunately put this on hold while in school last semester.
+                </p>
+                <div class="level is-mobile">
+                  <div class="level-left">
+                    <div class="level-item"><span class="tag is-dark">Love2D</span></div>
+                    <div class="level-item"><span class="tag is-dark">Lua</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- <div class="column is-one-third">
+          <div class="card">
+            <div class="card-image"></div>
+            <div class="card-content"></div>
+          </div>
+        </div>
+      </div> -->
+    </section>
+
+    <!-- Experience -->
+    <section id="grey-section" class="section">
+      <div id="experience" class="content has-text-centered">
+        <p class="subtitle is-1">
+          Work Experience
+        </p>
+      </div>
+      <article class="message is-primary">
+        <div class="message-body">
+          <a href="historyviz.com/" class="subtitle is-4" style="text-decoration: none">ARIES Program</a>
+          <p class="subtitle is-5">Pathfinder-Applied Researcher</p>
+          The ARIES team works with virtual and augmented reality to create hands on learning experiences. I first came in contact with the team after my friend <a href="http://historyviz.com/portfolio/dillon">Dillon</a> told me about a project he was working on with the team. The CI-SPY project used AR to recreate a, now mostly destroyed, historic black school. I think this sort of material is extremely valuable; any time invested towards creating new ways to learn and solidifying history in a way that may be more digestible is worth it. I currently am working on a few sports simulators where the project aim is to help injured or otherwise benched players refine their tactics.
+        </div>
+      </article>
+      <article class="message is-success">
+        <div class="message-body">
+          <a href="https://www.622north.com/" class="subtitle is-4" style="text-decoration: none">622 North</a>
+          <p class="subtitle is-5">Prep Cook 2018-Present</p>
+          <p> 
+            I began cooking here after hearing about, then trying, their delicious food. As I wanted to further improve my knife skills and palette it was a good fit. I've learned, and am mastering, different cuts (e.g. julienne, chiffonade, brunoise), how to manage multiple dishes at once, and American cooking.
+          </p>
+        </div>
+      </article>
+
+      <article class="message">
+        <div class="message-body">
+          <a href="https://www.theblackhenrestaurant.com/" class="subtitle is-4" style="text-decoration: none">Black Hen and Bar Blue</a>
+          <p class="subtitle is-5">Pantry and Pastry Chef 2016-2017</p>
+          <p> 
+            I began cooking here after a friend offered me an "in" as a cook. I accepted their offer as I wanted to explore a childhood dream, being a cook. It was a lovely job, yet extremely taxing. I learned finer aspects of cooking (e.g. quenelles, plating techniques) and used modern cooking machinery (e.g. sous vides, vacuum sealers). After a year or so I quit and reentered academia to finish my bachlor's degree.
+          </p>
+        </div>
+      </article>
+
+      <article class="message is-dark">
+        <div class="message-body">
+          <a href="https://www.wuvt.vt.edu/" class="subtitle is-4" style="text-decoration: none">WUVT</a>
+          <p class="subtitle is-5">AM Director & Traffic Director 2014-2016</p>
+          <p>              
+            I began working at this radio station in 2013 in hopes of expanding my musical taste and deepening my musical knowledge. I later was offered the position of Traffic Director. As the Traffic Director I was in charge of a group of 16 individuals who, along with myself, were to create automated, yet tasteful, traffic (essentially playlists) for the station. As the AM Director I was in charge of 40+ individuals who were in the process of training to become certified DJs. During that time I created an online <a href="https://www.wuvt.vt.edu/am-guide">guide</a> to assist DJs when I was not available. This guide is still in use today.
+          </p>
+        </div>
+      </article>
+    </section>
+
+    <!-- Contact -->
+    <section class="section">
+      <div id="contact" class="content has-text-centered">
+        <p class="subtitle is-1">
+          Contact
+        </p>
+      </div>
+      <div class="level">
+        <div class="level-item">
+          <form class="columns" action="https://formspree.io/jmc529@vt.edu" method="POST">
+            <div class="column">
+              <div class="field">
+                <p class="control">
+                  <input class="button is-success is-fullwidth" type="submit" value="Send">
+                </p>
+              </div>
+              <div class="field">
+                <p class="control has-icons-left">
+                  <input class="input" type="email" name="_replyto" placeholder="Email" required>
+                  <span class="icon is-small is-left">
+                      <i class="fas fa-envelope"></i>
+                  </span>
+                </p>
+              </div>
+              <div class="field">
+                <p class="control has-icons-left">
+                  <input class="input" type="name" name="name" placeholder="Name" required>
+                  <span class="icon is-small is-left">
+                    <i class="fas fa-user"></i>
+                  </span>
+                </p>
+              </div>
+            </div>
+            <div class="column">
+              <div class="field">
+                <div class="control">
+                  <textarea class="textarea" rows="4" type="message" name="message" placeholder="Message" required></textarea>
+                </div>
+              </div>
+            </div>
+            <!-- Subject Line -->
+            <input type="hidden" name="_subject" value="github pages message" />
+            <!-- Bot Proofing -->
+            <input type="text" name="_gotcha" style="display:none" />
+          </form>
+        </div>
+        <div class="level-item">
+          <div class="notification is-info">
+            <div class="columns">
+              <div class="column">
+                <p>
+                  Let's link up!
+                  <br>
+                  I try to get back to emails
+                  as fast as possible, if you
+                  <br>
+                  want to reach out: send me a
+                  message here or on some
+                  <br>
+                  other platform.
+                </p>
+              </div>
+              <div class="column">
+                <ul id="contact-icons" class="content has-text-centered">
+                  <li>
+                    <a class="icon is-large" href="mailto:jmc529@vt.edu" target="_blank">
+                      <i class="fas fa-envelope fa-2x"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="icon is-large" href="https://github.com/jmc529" target="_blank">
+                      <i class="fab fa-github fa-2x"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="icon is-large" href="https://www.linkedin.com/in/joe-conwell/" target="_blank">
+                      <i class="fab fa-linkedin fa-2x"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="level">
+        <div class="level-left"></div>
+        <div class="level-right">
+          <div class="level-item">
+            <p>
+              Made by Joe Conwell. January 2019
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
