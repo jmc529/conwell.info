@@ -1,6 +1,5 @@
 backend:
   name: git-gateway
-  repo: jmc529/conwell.info
   branch: master
 
 media_folder: static/img
