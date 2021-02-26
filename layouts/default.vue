@@ -3,10 +3,9 @@
   <div>
     <b-navbar
       id="navbar"
-      class="navbar is-primary"
+      class="navbar is-primary is-fixed-top"
       role="navigation"
       aria-label="main navigation"
-      :fixed-top="true"
     >
       <template #brand>
         <b-navbar-item tag="router-link" :to="{ path: '/' }">
@@ -89,11 +88,15 @@ export default {
       const menu = document.getElementsByClassName('navbar-menu')[0]
       const burger = document.getElementsByClassName('navbar-burger')[0]
       const el = document.getElementById(id)
-      el.scrollIntoView({ behavior: 'smooth' })
-      if (menu.getAttribute('class').includes('is-active')) {
-        burger.setAttribute('class', 'navbar-burger burger')
-        burger.removeAttribute('aria-expanded')
-        menu.setAttribute('class', 'navbar-menu')
+      if (el === null) {
+        window.open(`/#${id}`, '_self')
+      } else {
+        el.scrollIntoView({ behavior: 'smooth' })
+        if (menu.getAttribute('class').includes('is-active')) {
+          burger.setAttribute('class', 'navbar-burger burger')
+          burger.removeAttribute('aria-expanded')
+          menu.setAttribute('class', 'navbar-menu')
+        }
       }
     },
     handleScroll() {

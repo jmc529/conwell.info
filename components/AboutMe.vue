@@ -5,7 +5,7 @@
     </div>
     <div class="tile is-ancestor is-mobile">
       <div class="tile">
-        <div class="tile is-vertical is-8">
+        <div class="tile is-vertical is-9">
           <div class="tile is-parent">
             <div class="tile is-child box">
               <div class="content">
@@ -15,7 +15,7 @@
                   back to a restaurant. I am currently a mathematics student at
                   Virginia Tech with a minor in computer science and philosophy.
                   I was recently grant funded for a project my team calls
-                  <a href="evolutionEd.gitlab.io" target="_blank"
+                  <a href="https://evolutionEd.gitlab.io" target="_blank"
                     >"EvolutionEd"</a
                   >. I am somewhat of an avid cook, last year I started a
                   sourdough mother and a kombucha mother (both are now dead
@@ -219,7 +219,7 @@
             </div>
           </div>
         </div>
-        <div class="tile is-parent is-4">
+        <div class="tile is-parent is-3">
           <div id="tile-image" class="tile is-child box">
             <figure class="image">
               <img src="~assets/images/joe-food.jpg" alt="joe munching" />
@@ -237,7 +237,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 #grey-section {
   background-color: #d1d3c5;
 }
@@ -267,5 +267,9 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
+  img {
+    height: 35vh;
+    width: 35vh;
+  }
 }
 </style>
