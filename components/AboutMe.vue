@@ -5,7 +5,7 @@
     </div>
     <div class="tile is-ancestor is-mobile">
       <div class="tile">
-        <div class="tile is-vertical is-9">
+        <div class="tile is-vertical is-10">
           <div class="tile is-parent">
             <div class="tile is-child box">
               <div class="content">
@@ -219,7 +219,7 @@
             </div>
           </div>
         </div>
-        <div class="tile is-parent is-3">
+        <div class="tile is-parent is-2">
           <div id="tile-image" class="tile is-child box">
             <figure class="image">
               <img src="~assets/images/joe-food.jpg" alt="joe munching" />
@@ -268,8 +268,8 @@ export default {
   justify-content: center;
   align-items: center;
   img {
-    height: 35vh;
-    width: 35vh;
+    height: auto;
+    width: 30em;
   }
 }
 </style>
