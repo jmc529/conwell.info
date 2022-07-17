@@ -1,48 +1,32 @@
-_Psst — looking for a more complete solution? Check out [SvelteKit](https://kit.svelte.dev), the official framework for building web applications of all sizes, with a beautiful development experience and flexible filesystem-based routing._
+# conwell.info
 
-_Looking for a shareable component template instead? You can [use SvelteKit for that as well](https://kit.svelte.dev/docs#packaging) or the older [sveltejs/component-template](https://github.com/sveltejs/component-template)_
+A personal site that showcase some projects, a blog, and anything else I add to it on a whim. w
+This site has been rewritten a few times; look at the branches for archives of those rewrites.
 
----
-
-# svelte app
-
-This is a project template for [Svelte](https://svelte.dev) apps. It lives at https://github.com/sveltejs/template.
-
-To create a new project based on this template using [degit](https://github.com/Rich-Harris/degit):
+## Developing
 
 ```bash
-npx degit sveltejs/template svelte-app
-cd svelte-app
-```
-
-## Get started
-
-Install the dependencies...
-
-```bash
-cd svelte-app
 npm install
-```
 
-...then start [Rollup](https://rollupjs.org):
-
-```bash
 npm run dev
+
+# or start the server and open the app in a new browser tab
+npm run dev -- --open
 ```
 
-Navigate to [localhost:8080](http://localhost:8080). You should see your app running. Edit a component file in `src`, save it, and reload the page to see your changes.
+## Building
 
-## Building and running in production mode
-
-To create an optimised version of the app:
+To create a production version of your app:
 
 ```bash
 npm run build
 ```
 
-You can run the newly built app with `npm run start`. This uses [sirv](https://github.com/lukeed/sirv), which is included in your package.json's `dependencies` so that the app will work when you deploy to platforms like [Heroku](https://heroku.com).
+You can preview the production build with `npm run preview`.
 
-## Deploying to the
+## Deploying to the web
+
+> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
 
 ### With [surge](https://surge.sh/)
 
@@ -56,5 +40,5 @@ Then, from within your project folder:
 
 ```bash
 npm run build
-surge public my-project.surge.sh
+surge public conwell.info
 ```
