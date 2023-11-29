@@ -1,31 +1,8 @@
 <script lang="ts">
     import { onMount, onDestroy } from 'svelte';
     import { browser } from '$app/environment';
-
-
-    let prevScrollPos: number = 0;
-    const sections: {name: string, id: string}[] = [
-        {
-            name: 'Home',
-            id: 'hero',
-        },
-        {
-            name: 'About Me',
-            id: 'about',
-        },
-        {
-            name: 'Projects',
-            id: 'projects',
-        },
-        {
-            name: 'Experience',
-            id: 'experience',
-        },
-        {
-            name: 'Contact',
-            id: 'contact',
-        }
-    ];
+    import type { LayoutData } from './$types';
+	export let data: LayoutData;    
 
     function scrollToId(id: string) {
         const el = document.getElementById(id);
@@ -41,12 +18,12 @@
         const el = document.getElementById('navbar');
         
         if (el !== null) {
-            if (prevScrollPos > currentScrollPos || currentScrollPos <= 0) {
+            if (data.prevScrollPos > currentScrollPos || currentScrollPos <= 0) {
                 el.style.top = '0';
             } else {
                 el.style.top = `-${el.offsetHeight.toString()}px`;
             }
-            prevScrollPos = currentScrollPos;
+            data.prevScrollPos = currentScrollPos;
         }
     }
 
@@ -67,51 +44,80 @@
 </script>
 
 <style lang="scss">
-@import '../sass/theme';
+@use 'chota';
+@import '$lib/scss/theme';
 
-#logo:hover {
-    background-color: transparent !important;
-    cursor: unset;
+#logo {
+    width: 4vw;
+    margin: none;
+    &:hover {
+        background-color: transparent !important;
+        cursor: unset;
+    }
 }
 
-nav {
-    transition: top 0.3s;
-    height: $navHeight;
+header {
+    padding: none;
+    nav {
+        transition: top 0.3s;
+        height: $navHeight;
+        margin: 1vh 1vw;
+        padding: 0 1vw;
+        a {
+            border: none;
+        }
+    }
 }
+
+// .spaced-row {
+//     display: flex;
+//     flex-direction: row;
+//     justify-content: space-between;
+//     align-items: center;
+// }
+
+// .column-gap-1 {
+//     column-gap: 1vw;
+// }
 </style>
 
 <header>
     <nav
         id="navbar"
+        class="nav"
         aria-label="main navigation"
     >
-        <a href="/">
-            <img
-                id="logo"
-                alt="Clover Logo"
-                aria-label="Brand logo"
-                src="/svgs/clover.svg"
-            />
-        </a>
+        <div class="nav-left">
+            <a class="brand" href="/">
+                <img
+                    id="logo"
+                    alt="Clover Logo"
+                    aria-label="Brand logo"
+                    src="/svgs/clover.svg"
+                />
+            </a>
+        </div>
         
-        <div>
-            {#each sections as section}
-                <button
+        <div class="tabs">
+            {#each data.sections as section}
+                <a
                     aria-label="{section.name}"
-                    on:click={() => scrollToId(section.id)}
+                    href="/#{section.id}"
                 >
                     {section.name}
-                </button>
+                </a>
             {/each}
         </div>
 
-        <button
-            id="registerButton"
-            class="button is-primary"
-            on:click={() => cv()}
-        >
-            <strong>Resume</strong>
-        </button>
+        <div class="nav-right">
+            <button
+                id="registerButton"
+                class="button primary"
+                on:click={() => cv()}
+            >
+                <strong>Resume</strong>
+            </button>
+        </div>
     </nav>
 </header>
 

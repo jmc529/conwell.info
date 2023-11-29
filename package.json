@@ -32,7 +32,10 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@fontsource/fira-code": "^5.0.15",
 		"@fontsource/fira-mono": "^5.0.8",
-		"simpledotcss": "^2.1.1"
+		"@fontsource/comfortaa": "^5.0.17",
+		"@fontsource/inconsolata": "^5.0.15",
+		"chota": "^0.9.2"
 	}
 }
