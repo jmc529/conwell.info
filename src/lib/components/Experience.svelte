@@ -13,14 +13,14 @@
 	<h2 class="text-center">Work Experience</h2>
 
 	<div class="stack">
-		{#each jobs as job}
+		{#each jobs as job (job.company)}
 			<article class="card" style:--accent={accents[job.accent]}>
 				<h3>
 					<a href={job.href} target="_blank" rel="noreferrer noopener">{job.company}</a>
 				</h3>
 				<p class="role">{job.role}</p>
 				<p>
-					{#each job.body as segment}
+					{#each job.body as segment, sIndex (sIndex)}
 						{#if segment.href}
 							<a href={segment.href} target="_blank" rel="noreferrer noopener">{segment.text}</a>
 						{:else}

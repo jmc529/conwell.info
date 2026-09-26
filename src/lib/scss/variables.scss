@@ -1,5 +1,7 @@
-$font-sans: 'Fira-Code', 'Comfortaa';
-$font-mono: 'Fira-Mono', 'Inconsolata';
+// @fontsource declares these as 'Fira Code' and 'Fira Mono' (space, no hyphen).
+// A hyphen here silently misses and falls through to the fallback family.
+$font-sans: 'Fira Code', 'Comfortaa';
+$font-mono: 'Fira Mono', 'Inconsolata';
 $min-width: 780px;
 $navHeight: 10vh;
 
@@ -33,6 +35,6 @@ $text-primary: #fff;
 	// --grid-gutter: 2rem;
 	// --font-size: 1.6rem;
 	// --font-color: #333333;
-	--font-family-sans: 'Fira-Code', 'Comfortaa';
-	--font-family-mono: 'Fira-Mono', 'Inconsolata';
+	--font-family-sans: 'Fira Code', 'Comfortaa';
+	--font-family-mono: 'Fira Mono', 'Inconsolata';
 }

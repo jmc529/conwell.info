@@ -9,11 +9,10 @@ export default defineConfig({
 	css: {
 		preprocessorOptions: {
 			scss: {
+				// Only Sass variables/mixins belong here. Font faces are imported
+				// once via `$lib/fonts` so they are not re-emitted into every
+				// component's compiled stylesheet.
 				additionalData: `
-					@use '@fontsource/fira-code';
-					@use '@fontsource/fira-mono';
-					@use '@fontsource/comfortaa';
-					@use '@fontsource/inconsolata';
 					@use '$lib/scss/variables' as *;
 					@use '$lib/scss/mixins' as *;
 				`

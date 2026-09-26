@@ -34,7 +34,7 @@ export const jobs: Job[] = [
 		accent: 'success',
 		body: [
 			{
-				text: "I began cooking here after hearing about, then trying, their delicious food. As I wanted to further improve my knife skills and palette it was a good fit. I've learned, and am mastering, different cuts (e.g. julienne, chiffonade, brunoise), how to manage multiple dishes at once, and American cooking."
+				text: "I began cooking here after hearing about, then trying, their delicious food. As I wanted to further improve my knife skills and palate it was a good fit. I've learned, and am mastering, different cuts (e.g. julienne, chiffonade, brunoise), how to manage multiple dishes at once, and American cooking."
 			}
 		]
 	},
@@ -45,7 +45,7 @@ export const jobs: Job[] = [
 		accent: 'neutral',
 		body: [
 			{
-				text: 'I began cooking here after a friend offered me an "in" as a cook. I accepted their offer as I wanted to explore a childhood dream, being a cook. It was a lovely job, yet extremely taxing. I learned finer aspects of cooking (e.g. quenelles, plating techniques) and used modern cooking machinery (e.g. sous vides, vacuum sealers). After a year or so I quit and reentered academia to finish my bachlors degree.'
+				text: 'I began cooking here after a friend offered me an "in" as a cook. I accepted their offer as I wanted to explore a childhood dream, being a cook. It was a lovely job, yet extremely taxing. I learned finer aspects of cooking (e.g. quenelles, plating techniques) and used modern cooking machinery (e.g. sous vides, vacuum sealers). After a year or so I quit and reentered academia to finish my bachelors degree.'
 			}
 		]
 	},

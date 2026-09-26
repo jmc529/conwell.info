@@ -1,11 +1,12 @@
 <script lang="ts">
 	import 'chota';
-	import { onDestroy, onMount } from 'svelte';
+	import '$lib/fonts';
+	import { onMount, type Snippet } from 'svelte';
 	import { browser } from '$app/environment';
 	import Footer from '$lib/components/Footer.svelte';
 	import type { LayoutData } from './$types';
 
-	export let data: LayoutData;
+	let { data, children }: { data: LayoutData; children: Snippet } = $props();
 
 	let prevScrollPos = 0;
 
@@ -33,11 +34,10 @@
 	}
 
 	onMount(() => {
-		if (browser) window.addEventListener('scroll', handleScroll, { passive: true });
-	});
+		if (!browser) return;
 
-	onDestroy(() => {
-		if (browser) window.removeEventListener('scroll', handleScroll);
+		window.addEventListener('scroll', handleScroll, { passive: true });
+		return () => window.removeEventListener('scroll', handleScroll);
 	});
 </script>
 
@@ -50,11 +50,11 @@
 		</div>
 
 		<div class="tabs">
-			{#each data.sections as section}
+			{#each data.sections as section (section.id)}
 				<a
 					aria-label={section.name}
 					href="/#{section.id}"
-					on:click={(event) => scrollToId(event, section.id)}
+					onclick={(event) => scrollToId(event, section.id)}
 				>
 					{section.name}
 				</a>
@@ -62,14 +62,14 @@
 		</div>
 
 		<div class="nav-right">
-			<button class="button primary" on:click={cv}>
+			<button class="button primary" onclick={cv}>
 				<strong>Resume</strong>
 			</button>
 		</div>
 	</nav>
 </header>
 
-<slot />
+{@render children()}
 
 <Footer />
 
