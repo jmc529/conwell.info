@@ -1,10 +1,66 @@
 version: 2.1
 
 orbs:
-  node: circleci/node@5.0.2
+  node: circleci/node@7.2.1
 
 workflows:
-  run-npm-command:
+  build-and-deploy:
     jobs:
-      - node/run:
-          npm-run: deploy
+      - build
+      - deploy-production:
+          requires: [build]
+          context: cloudflare
+          filters:
+            branches:
+              only: main
+      - deploy-preview:
+          requires: [build]
+          context: cloudflare
+          filters:
+            branches:
+              ignore: main
+jobs:
+  build:
+    executor:
+      name: node/default
+      tag: '24.20.0'
+    steps:
+      - checkout
+      - node/install-packages
+      - run:
+          name: Build
+          command: npm run build
+      - run:
+          name: Debug - list build output
+          command: ls -la build || echo "build directory does not exist"
+      - persist_to_workspace:
+          root: .
+          paths:
+            - build
+
+  deploy-production:
+    executor:
+      name: node/default
+      tag: '24.20.0'
+    steps:
+      - checkout
+      - attach_workspace:
+          at: ~/project
+      - node/install-packages
+      - run:
+          name: Deploy to Cloudflare Workers
+          command: npx wrangler deploy
+
+
+  deploy-preview:
+    executor:
+      name: node/default
+      tag: '24.20.0'
+    steps:
+      - checkout
+      - attach_workspace:
+          at: ~/project
+      - node/install-packages
+      - run:
+          name: Upload preview version
+          command: npx wrangler versions upload --preview-alias preview
