@@ -26,37 +26,13 @@ npm run build
 
 You can preview the production build with `npm run preview`.
 
-## Deploying to the web
-
-The site is fully prerendered static HTML (see `prerender` in `src/routes/+layout.ts`), so it
-deploys to any static host. It is currently set up for [Cloudflare Pages](https://pages.cloudflare.com/),
-with CircleCI handling the build and deploy.
-
-### One-time Cloudflare setup
-
-1. Create a Pages project named `jmconwell` in the
-   [Cloudflare dashboard](https://dash.cloudflare.com/). The name must match `name` in
-   `wrangler.toml`.
-2. Attach the `jmconwell.com` custom domain to that project.
-3. Create an API token with the **Cloudflare Pages: Edit** permission
-   ([instructions](https://developers.cloudflare.com/pages/get-started/direct-upload/)).
-4. In the CircleCI project settings, add a context called `cloudflare` containing:
-
-   | Variable                | Value                 |
-   | ----------------------- | --------------------- |
-   | `CLOUDFLARE_ACCOUNT_ID` | Your account ID       |
-   | `CLOUDFLARE_API_TOKEN`  | The token from step 3 |
-
-`account_id` can also be set in `wrangler.toml` if you prefer not to pass it through the
-environment.
-
 ### Deploying manually
 
 Requires the two environment variables above to be exported.
 
 ```bash
 npm run build
-npx wrangler pages deploy
+npx wrangler deploy
 ```
 
 ### Deploying through CI
