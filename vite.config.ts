@@ -10,10 +10,6 @@ export default defineConfig({
 		preprocessorOptions: {
 			scss: {
 				additionalData: `
-					@use '@fontsource/fira-code';
-					@use '@fontsource/fira-mono';
-					@use '@fontsource/comfortaa';
-					@use '@fontsource/inconsolata';
 					@use '$lib/scss/variables' as *;
 					@use '$lib/scss/mixins' as *;
 				`
