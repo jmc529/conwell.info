@@ -6,7 +6,7 @@
 	<h2 class="text-center">Featured Projects</h2>
 
 	<div class="row">
-		{#each projects as project}
+		{#each projects as project (project.title)}
 			<div class="col-4-md col-12">
 				<article class="card">
 					<a href={project.href} target="_blank" rel="noreferrer noopener">
@@ -17,7 +17,7 @@
 					</h3>
 					<p>{project.summary}</p>
 					<p class="tags">
-						{#each project.tags as tag}
+						{#each project.tags as tag (tag)}
 							<span class="tag">{tag}</span>
 						{/each}
 					</p>

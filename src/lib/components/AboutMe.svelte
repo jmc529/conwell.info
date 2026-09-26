@@ -8,9 +8,9 @@
 	<h2 class="text-center">About Me</h2>
 
 	<div class="card prose">
-		{#each about.paragraphs as paragraph}
+		{#each about.paragraphs as paragraph, pIndex (pIndex)}
 			<p>
-				{#each paragraph as segment}
+				{#each paragraph as segment, sIndex (sIndex)}
 					{#if segment.href}
 						<a href={segment.href} target="_blank" rel="noreferrer noopener">{segment.text}</a>
 					{:else}
@@ -22,12 +22,12 @@
 	</div>
 
 	<div class="row">
-		{#each techGroups as group}
+		{#each techGroups as group (group.id)}
 			<div class="col-6-md col-12">
 				<div class="card" id={group.id}>
 					<h3>{group.title}</h3>
 					<ul class="icon-grid">
-						{#each group.tech as item}
+						{#each group.tech as item (item.name)}
 							<li>
 								<a href={item.href} target="_blank" rel="noreferrer noopener">
 									<Icon name={item.icon} title={item.name} />

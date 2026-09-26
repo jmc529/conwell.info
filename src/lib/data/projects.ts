@@ -23,14 +23,14 @@ export const projects: Project[] = [
 		image: '/images/M3.png',
 		alt: 'M3 banner',
 		summary:
-			'M3 is a project I started Janurary 2019 after using and feeling disatisfied with the current webapp musicplayers that were available. It is still in development.',
+			'M3 is a project I started January 2019 after using and feeling dissatisfied with the current webapp music players that were available. It is still in development.',
 		tags: ['JavaScript', 'HTML', 'CSS']
 	},
 	{
 		title: 'Space Invaders',
 		href: 'https://github.com/jmc529/spaceinvaders',
 		image: '/images/spaceinvaders.png',
-		alt: 'spaceinvaders banner',
+		alt: 'Space Invaders banner',
 		summary:
 			'This project was originally intended as a comparison for Entity Component System vs Object Oriented design in video games. I unfortunately put this on hold while in school last semester.',
 		tags: ['Love2D', 'Lua']

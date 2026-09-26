@@ -13,7 +13,7 @@ export const about: AboutBlock = {
 	paragraphs: [
 		[
 			{
-				text: 'I like to think of myself as an openminded person. The kind of person that tries a different item off the menu each time I go back to a restaurant. I am currently a mathematics student at Virginia Tech with a minor in computer science and philosophy. I was recently grant funded for a project my team calls '
+				text: 'I like to think of myself as an open-minded person. The kind of person that tries a different item off the menu each time I go back to a restaurant. I am currently a mathematics student at Virginia Tech with a minor in computer science and philosophy. I was recently grant funded for a project my team calls '
 			},
 			{ text: '"EvolutionEd"', href: 'https://evolutionEd.gitlab.io' },
 			{

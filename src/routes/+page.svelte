@@ -21,7 +21,8 @@
 	<meta property="og:url" content="{site}/" />
 	<meta property="og:title" content={title} />
 	<meta property="og:description" content={description} />
-	<meta property="og:image" content="{site}/sitemeta.png" />
+	<meta property="og:image" content="{site}/sitemeta.jpg" />
+	<meta property="og:image:type" content="image/jpeg" />
 	<meta property="og:image:width" content="1200" />
 	<meta property="og:image:height" content="600" />
 	<meta property="og:image:alt" content="Joseph Conwell" />
@@ -29,7 +30,7 @@
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="twitter:title" content={title} />
 	<meta name="twitter:description" content={description} />
-	<meta name="twitter:image" content="{site}/sitemeta.png" />
+	<meta name="twitter:image" content="{site}/sitemeta.jpg" />
 </svelte:head>
 
 <main>
