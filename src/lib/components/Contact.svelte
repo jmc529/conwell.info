@@ -2,20 +2,7 @@
 	import github from 'devicon/icons/github/github-original.svg';
 	import linkedin from 'devicon/icons/linkedin/linkedin-original.svg';
 
-	// TODO(joe): the old form posted to `https://formspree.io/jmc529@vt.edu`, which is
-	// not a valid Formspree endpoint (real ones look like formspree.io/f/xxxxxxxx), so
-	// submissions have never gone anywhere. Restore the markup below once a real
-	// endpoint exists.
-	//
-	// <form action="https://formspree.io/f/XXXXXXXX" method="POST">
-	// 	<label for="email">Email</label>
-	// 	<input id="email" name="email" type="email" required />
-	// 	<label for="name">Name</label>
-	// 	<input id="name" name="name" type="text" required />
-	// 	<label for="message">Message</label>
-	// 	<textarea id="message" name="message" rows="5" required></textarea>
-	// 	<button class="button primary" type="submit">Send</button>
-	// </form>
+	const STATICFORMS_ENDPOINT = 'https://api.staticforms.dev/submit';
 	const email = 'jmc529@vt.edu';
 </script>
 
@@ -27,6 +14,25 @@
 			Let's link up! I try to get back to emails as fast as possible, if you want to reach out:
 			send me a message here or on some other platform.
 		</p>
+
+		<form action={STATICFORMS_ENDPOINT} method="POST" class="contact-form">
+			<input type="hidden" name="apiKey" value="sf_ee7fe5257c2d5cb6fae95e4e" />
+			<input type="hidden" name="subject" value="Joe Conwell submission" />
+
+			<label for="name">Name
+				<input id="name" name="name" type="text" required />
+			</label>
+
+			<label for="email">Email
+				<input id="email" name="email" type="email" required />
+			</label>
+
+			<label for="message">Message
+				<textarea id="message" name="message" required></textarea>
+			</label>
+
+			<button class="button primary" type="submit">Send</button>
+		</form>
 
 		<ul class="social">
 			<li>
@@ -69,6 +75,37 @@
 	.card {
 		background-color: #f5f5f5;
 		text-align: center;
+	}
+
+	.contact-form {
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+		max-width: 40rem;
+		margin: 1.5rem auto 0;
+		text-align: left;
+
+		label {
+			display: block;
+			font-weight: bold;
+			margin-bottom: 0.25rem;
+		}
+
+		input,
+		textarea {
+			width: 100%;
+			padding: 0.5rem;
+			border: 1px solid $light-gray;
+			border-radius: 0.25rem;
+			font-family: inherit;
+			font-size: 1rem;
+			box-sizing: border-box;
+		}
+
+		button {
+			align-self: flex-start;
+			margin-top: 0.5rem;
+		}
 	}
 
 	.social {

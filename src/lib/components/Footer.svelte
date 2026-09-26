@@ -1,5 +1,5 @@
 <footer class="footer">
-	<p>Made by Joe Conwell. March 2021</p>
+	<p>Made by Joe Conwell. 2024</p>
 </footer>
 
 <style lang="scss">

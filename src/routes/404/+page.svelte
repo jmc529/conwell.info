@@ -6,7 +6,11 @@
 
 <section class="scene">
 	<img class="trees" src="/images/mount_trees.svg" alt="" aria-hidden="true" />
-	<img class="camper" src="/images/camper.gif" alt="" aria-hidden="true" />
+
+	<picture>
+		<source media="(prefers-reduced-motion: reduce)" srcset="/images/camper.png" />
+		<img class="camper" src="/images/camper.gif" alt="" aria-hidden="true" />
+	</picture>
 
 	<h1>404</h1>
 	<p class="line">Nothing&rsquo;s cooking here.</p>
@@ -105,14 +109,6 @@
 		.camper {
 			bottom: 2%;
 			width: 58%;
-		}
-	}
-
-	@media (prefers-reduced-motion: reduce) {
-		.camper {
-			/* The camper is an animated GIF; freeze it for users who ask for
-			   reduced motion. */
-			pointer-events: auto;
 		}
 	}
 </style>

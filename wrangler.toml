@@ -4,3 +4,4 @@ preview_urls = true
 
 [assets]
 directory = "build"
+not_found_handling = "404-page"
