@@ -41,4 +41,4 @@ jobs:
           name: Deploy to Cloudflare Pages
           # Needs CLOUDFLARE_ACCOUNT_ID and CLOUDFLARE_API_TOKEN (Pages: Edit)
           # from the "cloudflare" context configured in the CircleCI UI.
-          command: npx wrangler pages deploy
+          command: npx wrangler pages deploy build --project-name=jmconwell
