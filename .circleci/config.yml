@@ -1,15 +1,12 @@
 version: 2.1
 
 orbs:
-  node: circleci/node@5.0.2
+  node: circleci/node@7.2.1
 
 workflows:
   build-and-deploy:
     jobs:
-      - node/install
-      - build:
-          requires:
-            - node/install
+      - build
       - deploy:
           requires:
             - build
@@ -17,7 +14,9 @@ workflows:
 
 jobs:
   build:
-    executor: node/default
+    executor:
+      name: node/default
+      tag: '24.20.0'
     steps:
       - checkout
       - node/install-packages
@@ -30,10 +29,14 @@ jobs:
             - build
 
   deploy:
-    executor: node/default
+    executor:
+      name: node/default
+      tag: '24.20.0'
     steps:
+      - checkout
       - attach_workspace:
           at: build
+      - node/install-packages
       - run:
           name: Deploy to Cloudflare Pages
           # Needs CLOUDFLARE_ACCOUNT_ID and CLOUDFLARE_API_TOKEN (Pages: Edit)
