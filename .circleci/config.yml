@@ -28,7 +28,7 @@ jobs:
           paths:
             - build
 
-  deploy:
+    deploy:
     executor:
       name: node/default
       tag: '24.20.0'
@@ -39,6 +39,6 @@ jobs:
       - node/install-packages
       - run:
           name: Deploy to Cloudflare Pages
-          # Needs CLOUDFLARE_ACCOUNT_ID and CLOUDFLARE_API_TOKEN (Pages: Edit)
-          # from the "cloudflare" context configured in the CircleCI UI.
-          command: npx wrangler pages deploy
+          command: npx wrangler pages deploy build
+          environment:
+            WRANGLER_SEND_METRICS: 'false'
