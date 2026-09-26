@@ -24,11 +24,11 @@ jobs:
           name: Build
           command: npm run build
       - persist_to_workspace:
-          root: .
+          root: build
           paths:
             - build
 
-    deploy:
+  deploy:
     executor:
       name: node/default
       tag: '24.20.0'
