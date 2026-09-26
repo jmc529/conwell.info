@@ -4,7 +4,38 @@ orbs:
   node: circleci/node@5.0.2
 
 workflows:
-  run-npm-command:
+  build-and-deploy:
     jobs:
-      - node/run:
-          npm-run: deploy
+      - node/install
+      - build:
+          requires:
+            - node/install
+      - deploy:
+          requires:
+            - build
+          context: cloudflare
+
+jobs:
+  build:
+    executor: node/default
+    steps:
+      - checkout
+      - node/install-packages
+      - run:
+          name: Build
+          command: npm run build
+      - persist_to_workspace:
+          root: build
+          paths:
+            - build
+
+  deploy:
+    executor: node/default
+    steps:
+      - attach_workspace:
+          at: build
+      - run:
+          name: Deploy to Cloudflare Pages
+          # Needs CLOUDFLARE_ACCOUNT_ID and CLOUDFLARE_API_TOKEN (Pages: Edit)
+          # from the "cloudflare" context configured in the CircleCI UI.
+          command: npx wrangler pages deploy

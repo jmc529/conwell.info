@@ -1,0 +1,6 @@
+# Cloudflare Pages project config.
+# The project name must match an existing Pages project in your Cloudflare account;
+# create one at https://dash.cloudflare.com/ before the first deploy.
+name = "jmconwell"
+pages_build_output_dir = "build"
+compatibility_date = "2026-09-26"
