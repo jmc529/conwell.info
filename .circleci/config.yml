@@ -1,8 +1,5 @@
 version: 2.1
 
-orbs:
-  node: circleci/node@7.2.1
-
 workflows:
   build-and-deploy:
     jobs:
@@ -14,31 +11,33 @@ workflows:
 
 jobs:
   build:
-    executor:
-      name: node/default
-      tag: '24.20.0'
+    docker:
+      - image: cimg/node:24.20
     steps:
       - checkout
-      - node/install-packages
+      - run:
+          name: Install dependencies
+          command: npm ci
       - run:
           name: Build
           command: npm run build
       - persist_to_workspace:
-          root: build
+          root: .
           paths:
             - build
 
   deploy:
-    executor:
-      name: node/default
-      tag: '24.20.0'
+    docker:
+      - image: cimg/node:24.20
     steps:
       - checkout
       - attach_workspace:
-          at: build
-      - node/install-packages
+          at: .
+      - run:
+          name: Install dependencies
+          command: npm ci
       - run:
           name: Deploy to Cloudflare Pages
           # Needs CLOUDFLARE_ACCOUNT_ID and CLOUDFLARE_API_TOKEN (Pages: Edit)
           # from the "cloudflare" context configured in the CircleCI UI.
-          command: npx wrangler pages deploy
+          command: ./node_modules/.bin/wrangler pages deploy build
